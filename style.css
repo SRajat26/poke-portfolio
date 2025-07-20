@@ -147,7 +147,12 @@ li.active::before{
 
     #sprite-area {
         width: 50%;
+  font-size: 0.9em;
     }
+    
+.project-about-line{
+    margin-bottom: 0.8em;
+}
 }
 
 #content, #nav-area{
@@ -173,12 +178,8 @@ li.active::before{
   padding-left: 0.5%;
   padding-right: 0.5%;
   z-index: 500;
-  font-size: 0.9em;
 }
 
-.project-about-line{
-    margin-bottom: 0.8em;
-}
 
 #sprite-area img{
     width: 100%;
