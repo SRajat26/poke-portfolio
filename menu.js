@@ -12,6 +12,44 @@ async function loadData(){
     return response.json();
 }
 
+// Add a single summary element to the DOM for hover summaries
+let hoverSumm = document.getElementById('hover-summ');
+if (!hoverSumm) {
+    hoverSumm = document.createElement('div');
+    hoverSumm.id = 'hover-summ';
+    hoverSumm.style.position = 'absolute';
+    hoverSumm.style.pointerEvents = 'none';
+    hoverSumm.style.zIndex = '9999';
+    hoverSumm.style.display = 'none';
+    hoverSumm.style.background = 'rgba(255,255,255,0.95)';
+    hoverSumm.style.border = '1px solid #6a3fa0';
+    hoverSumm.style.borderRadius = '6px';
+    hoverSumm.style.padding = '2px 10px';
+    hoverSumm.style.fontSize = '0.9em';
+    hoverSumm.style.color = '#6a3fa0';
+    hoverSumm.style.boxShadow = '0 2px 8px rgba(0,0,0,0.08)';
+    document.body.appendChild(hoverSumm);
+}
+
+const menuList = document.getElementById('menu-list');
+let menuSummSpan = document.getElementById('menu-summ-span');
+if (!menuSummSpan) {
+    menuSummSpan = document.createElement('span');
+    menuSummSpan.id = 'menu-summ-span';
+    menuSummSpan.style.position = 'absolute';
+    menuSummSpan.style.pointerEvents = 'none';
+    menuSummSpan.style.zIndex = '1000';
+    menuSummSpan.style.background = 'rgba(255,255,255,0.95)';
+    menuSummSpan.style.border = '1px solid #6a3fa0';
+    menuSummSpan.style.borderRadius = '6px';
+    menuSummSpan.style.padding = '2px 10px';
+    menuSummSpan.style.fontSize = '0.9em';
+    menuSummSpan.style.color = '#6a3fa0';
+    menuSummSpan.style.boxShadow = '0 2px 8px rgba(0,0,0,0.08)';
+    menuSummSpan.style.display = 'none';
+    menuList.style.position = 'relative'; // Ensure ul is positioned
+    menuList.appendChild(menuSummSpan);
+}
 
 for (let i = 0; i < optList.length; i++){
     let opt = optList[i];
@@ -20,7 +58,7 @@ for (let i = 0; i < optList.length; i++){
         playSound("menuChange");
         desc.textContent=opt.dataset.preview;
         desc.style.backgroundColor="rgba(255, 255, 255 ,0.7)"
-        // Show data-summ beside the option
+        // Show data-summ beside the option (original span solution)
         if (opt.dataset.summ) {
             let summSpan = document.createElement('span');
             summSpan.className = 'summ-span';
@@ -29,7 +67,6 @@ for (let i = 0; i < optList.length; i++){
             summSpan.style.fontSize = '0.9em';
             summSpan.style.color = '#6a3fa0';
             opt.appendChild(summSpan);
-            opt.style.paddingBottom="1%";
         }
         // console.log("Active"+opt.textContent);
     })
@@ -42,7 +79,6 @@ for (let i = 0; i < optList.length; i++){
         let summSpan = opt.querySelector('.summ-span');
         if (summSpan) {
             opt.removeChild(summSpan);
-            opt.style.paddingBottom="0";
         }
         // console.log("Inactive"+opt.textContent);
     })
