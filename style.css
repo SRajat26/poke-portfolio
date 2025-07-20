@@ -113,7 +113,7 @@ li.active::before{
 
 #sprite-area{
     height: 100%;
-    width: 20%;
+    width: 25%;
     border-right: 4px solid rgb(157, 114, 162); /* outer dark */
    box-shadow:
   inset 0 0 0 2px #454141,   /* inner dark border */
