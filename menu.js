@@ -29,6 +29,7 @@ for (let i = 0; i < optList.length; i++){
             summSpan.style.fontSize = '0.9em';
             summSpan.style.color = '#6a3fa0';
             opt.appendChild(summSpan);
+            opt.style.paddingBottom="1%";
         }
         // console.log("Active"+opt.textContent);
     })
@@ -41,6 +42,7 @@ for (let i = 0; i < optList.length; i++){
         let summSpan = opt.querySelector('.summ-span');
         if (summSpan) {
             opt.removeChild(summSpan);
+            opt.style.paddingBottom="0";
         }
         // console.log("Inactive"+opt.textContent);
     })
