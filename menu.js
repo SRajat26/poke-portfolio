@@ -20,6 +20,16 @@ for (let i = 0; i < optList.length; i++){
         playSound("menuChange");
         desc.textContent=opt.dataset.preview;
         desc.style.backgroundColor="rgba(255, 255, 255 ,0.7)"
+        // Show data-summ beside the option
+        if (opt.dataset.summ) {
+            let summSpan = document.createElement('span');
+            summSpan.className = 'summ-span';
+            summSpan.textContent = opt.dataset.summ;
+            summSpan.style.marginLeft = '12px';
+            summSpan.style.fontSize = '0.9em';
+            summSpan.style.color = '#6a3fa0';
+            opt.appendChild(summSpan);
+        }
         // console.log("Active"+opt.textContent);
     })
 
@@ -27,6 +37,11 @@ for (let i = 0; i < optList.length; i++){
         opt.classList.remove("active");
         desc.textContent=""; 
         desc.style.backgroundColor="rgba(255, 255, 255 ,0.4)"
+        // Remove the data-summ span if present
+        let summSpan = opt.querySelector('.summ-span');
+        if (summSpan) {
+            opt.removeChild(summSpan);
+        }
         // console.log("Inactive"+opt.textContent);
     })
 }
