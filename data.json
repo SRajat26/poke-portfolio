@@ -1,0 +1,23 @@
+{
+  "trainer": {
+    "name": "SHREYANSH RAJAT",
+    "age": 20,
+    "hometown": "GORAKHPUR, INDIA",
+    "type": "WEB DEVELOPMENT, CLOUD DEVELOPMENT",
+    "languages": "ENGLISH, HINDI",
+    "bio": "Hey! I'm Shreyansh, a passionate trainer who architects and deploys robust digital solutions to the cloud.",
+    "hobbies": "READING, TRAVELLING "
+  },
+  "badges": [
+    {"languages": "JAVASCRIPT, C, C++, PYTHON, JAVA", "desc":"List of languages Shreyansh has learnt in his coding journey "},
+    {"frameworks": "REACT", "desc":"List of frameworks Shreyansh has used in his adventures"},
+    {"tools": "GIT, GITHUB", "desc": "Lost of tools Shreyansh uses to code more efficiently"},
+    {"databases":"Shreyansh is still learning!, He is super excited to learn about this domain!", "desc": "List of all the databases Shreyansh has worked on in the past"},
+    {"cloud": "AWS, GCP", "desc":"Cloud deployments are what make Shreyansh special. List of all the cloud environments he has experience with"}
+  ],
+  "projects":[
+    {"ScholarBase": {"name":"ScholarBase","sample":"Collaborative platform for writing and reading articles, Clean and intuitive UI with a modern academic vibe, Powered by QuillJS editor for rich text formatting.", "languages":"HTML, CSS, Javascript", "about":"Dynamic page rendering using JavaScript by fetching article content directly from the database, Firebase Authentication integrated for secure user sign-up and login, Full article lifecycle support – users can write and publish articles with content stored and served via Firebase.", "github":"https://github.com/AmanSaxena2107/ScholarBase", "live":"https://scholarbase.vercel.app/"},
+      "Etch-a-sketch": {"name":"Etch-a-sketch","sample":"A simple Etch-a-Sketch project using a grid of square divs to simulate drawing, Added features like adjustable canvas size and color selection for resetting the grid", "languages":"HTML, CSS, Javascript", "about": "Developed a basic Etch-a-Sketch project using a grid of square divs to simulate drawing, Added features like adjustable canvas size and color selection for resetting the grid", "github":"https://github.com/ShreyanshRajat/Etch-a-sketch", "live":"https://shreyanshrajat.github.io/Etch-a-sketch/"}
+    }]
+  }
+

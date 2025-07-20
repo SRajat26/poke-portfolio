@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shreyansh's World</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="top-zone">
+    <button id="menu-toggle">🔴</button>
+    <div id="game-area"></div>
+    <div id="menu-area">
+        <ul id="menu-list">
+            <li class="menu-option" data-preview="Meet your trainer — background, passions, and journey." onclick="about()">TRAINER CARD</li>
+            <li class="menu-option" data-preview="Inspect earned badges — languages, tools, and specialties unlocked and earned" onclick="skills()">BADGE CASE</li>
+            <li class="menu-option" data-preview="Browse the DEVDEX — A catalog of digital creatures raised from code and caffeine." onclick="projects()">DEVDEX</li>
+            <li class="menu-option" data-preview="A record of how far the journey has come." onclick="experience()">BATTLE LOG</li>
+            <li class="menu-option" data-preview="Connect with Trainer to play and grow together!" onclick="pcLinkForm()">PC LINK</li>
+            <li class="menu-option" data-preview="Tweak your experience of the Trainer's world." onclick="settings()">SETTINGS</li>
+        </ul>
+    </div>
+    </section>
+    <div id="popup-area"></div>
+    <div id="social-floater">
+      <a href="https://github.com/SRajat26" target="_blank" rel="noopener noreferrer">
+        <img src="images/github.png" alt="GitHub" class="pixel-icon" />
+      </a>
+      <a href="https://www.linkedin.com/in/rajat2610/" target="_blank" rel="noopener noreferrer">
+        <img src="images/linkedin.png" alt="LinkedIn" class="pixel-icon" />
+      </a>
+      <a href="mailto:shreyansh.rajat.2610@gmail.com">
+        <img src="images/mail.png" alt="Email" class="pixel-icon" />
+      </a>
+    </div>
+    <script src="menu.js"></script>
+</body>
+</html>
